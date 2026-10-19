@@ -9,5 +9,16 @@ def transform_basis(B: list[list[int]], C: list[list[int]]) -> list[list[float]]
 	C_inv = np.linalg.inv(C)
 
 	# Dot product of inverse matrix & converting matrix
-	P = np.dot(C_inv, B)
-	return P
+	P = np.matmul(C_inv, B)
+	return np.round(P, 5)
+
+# example
+B = [[1, 0, 0], 
+	[0, 1, 0], 
+	[0, 0, 1]]
+
+C = [[1, 2.3, 3], 
+	[4.4, 25, 6], 
+	[7.4, 8, 9]]
+
+print(transform_basis(B,C))
