@@ -1,5 +1,9 @@
 import numpy as np
 
+'''
+to get to matrix B using the matrix C, you would need to multiply C by P.
+to find matrix P: P = C^(-1) * B AKA C_inverse * B
+'''
 def transform_basis(B: list[list[int]], C: list[list[int]]) -> list[list[float]]:
 	# Convert the lists to arrays
 	C = np.array(C)
